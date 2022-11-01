@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kelans bilar erbjuder ett stort utbud av bilar">
+  <title>Kelans bilar</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<!--HTML validated at 2022-09-22 20:45-->
+<body>
+  <!--Navigation bar-->
+  <nav id="navigation-bar" class="active">
+    <!--Hamburger button shown when in mobile version (width < 980px)-->
+    <a href="#" id="toggle-nav-button" onclick="toggleNavbar()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <!--Navigation menu items-->
+    <ul id="nav-list">
+      <li class="nav-list-item">
+        <a class="nav-links" href="index.html">Hem</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-links" href="#cars-in-store">Bilar i lager</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-links" href="#about-us">Om Oss</a>
+      </li>
+      <li class="nav-list-item">
+        <a class="nav-links" href="#contact">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!--Main content of page-->
+  <main>
+    <!--Welcome section with three versions of a responsive image-->
+    <article id="welcome-section" class="site-sections">
+      <h1 class="site-heading">KELANS BILAR</h1>
+      <picture class="responsive-image">
+        <source media="(min-width: 730px)" srcset="img/volvointerior_desktop.jpg" />
+        <source media="(min-width: 529px)" srcset="img/volvointerior_tablet.jpg" />
+        <source media="(max-width: 528px)" srcset="img/volvointerior_mobile.jpg" />
+        <img src="img/volvointerior_desktop.jpg" alt="Interior of a Volvo">
+      </picture>
+    </article>
+
+    <!--Cars in store-->
+    <article id="cars-in-store">
+      <h2 class="section-headings">Bilar i lager</h2>
+      <section class="car-item">
+        <img src="img/v90.jpg" alt="Volvo V90">
+        <h3 class="brandName">VOLVO V90</h3>
+        <p>2020</p>
+        <strong class="priceTag">609 500kr</strong>
+      </section>
+      <section class="car-item">
+        <img src="img/xc60.jpg" alt="Volvo XC60">
+        <h3 class="brandName">VOLVO XC60</h3>
+        <p>2021</p>
+        <strong class="priceTag">430 000kr</strong>
+      </section>
+      <section class="car-item">
+        <img src="img/xc90.jpg" alt="Volvo XC90">
+        <h3 class="brandName">VOLVO XC90</h3>
+        <p>2022</p>
+        <strong class="priceTag">659 500kr</strong>
+      </section>
+      <section class="car-item">
+        <img src="img/xc40.jpg" alt="Volvo XC40">
+        <h3 class="brandName">VOLVO XC40</h3>
+        <p>2021</p>
+        <strong class="priceTag">500 000kr</strong>
+      </section>
+      <section class="car-item">
+        <img src="img/v60.jpg" alt="Volvo V60">
+        <h3 class="brandName">VOLVO V60</h3>
+        <p>2020</p>
+        <strong class="priceTag">420 000kr</strong>
+      </section>
+      <section class="car-item">
+        <img src="img/s60.jpg" alt="Volvo S60">
+        <h3 class="brandName">VOLVO S60</h3>
+        <p>2022</p>
+        <strong class="priceTag">535 000kr</strong>
+      </section>
+    </article>
+
+    <!--About us section-->
+    <article id="about-us" class="site-sections">
+      <h2 class="section-headings">Om oss</h2>
+      <p style="font-size: x-large;">Vi är en bilförsäljare som startade under pandemin specialiserade på Volvo</p>
+    </article>
+
+    <!--Contact section with a form-->
+    <article id="contact" class="site-sections">
+      <h2 class="section-headings">Kontakta oss</h2>
+      <form id="contact-form">
+          <input class="input-field" type="text" id="contactName" name="contactName" placeholder="Namn">
+          <input class="input-field" type="email" id="contactEmail" name="contactEmail" placeholder="Epost">
+          <textarea cols="6" class="input-field" id="messageForm" placeholder="Meddelande"></textarea>
+        <input id="submitButton" type="submit" value="Skicka">
+      </form>
+    </article>
+  </main>
+  <!--Footer-->
+  <footer><p>&#169; Kevin Lane <script>document.write(new Date().getFullYear())</script></p></footer>
+
+  <!--Implemented JavaScript for functionality to the hamburger button in mobile version-->
+  <script>
+    var navBar = document.getElementById('navigation-bar');
+    var navList = document.getElementById('nav-list');
+
+    window.addEventListener('resize', function(){
+      if (window.innerWidth > 980) {
+        navBar.style.height = "3em";
+        navList.style.display = "grid";
+      }
+      else{
+        navBar.style.height = "3em";
+        navList.style.display = "none";
+      }
+    });
+
+    function toggleNavbar(){
+      if (navBar.style.height === "3em") {
+        navBar.style.height = "20em";
+        navList.style.display = "grid";
+      }
+      else if(navBar.style.height === "20em" || window.innerWidth < 980){
+        navBar.style.height = "3em";
+        navList.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

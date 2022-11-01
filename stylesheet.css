@@ -1,0 +1,243 @@
+/*Validated at 2022-09-22 20:45*/
+body, html{
+  height: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  background-color: silver;
+}
+
+/*Navigation Bar*/
+#navigation-bar{
+  display: grid;
+  height:3em;
+  background-color: #0e2028;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#nav-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  justify-items: center;
+  background-color: #2F4559;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+#nav-list li:hover{
+  background-color: red;
+}
+
+#nav-list a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#toggle-nav-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+#toggle-nav-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 980px){
+  #navigation-bar{
+    height: 3em;
+  }
+
+  #nav-list{
+    display: none;
+    grid-template-columns: 1fr;
+    background-color: #0e2028;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    align-items: center;
+  }
+
+  #toggle-nav-button{
+    display: flex;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 981px){
+  #navigation-bar{
+    height: 3em;
+  }
+
+  #nav-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    justify-items: center;
+    background-color: #0e2028;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.nav-list-item{
+  list-style: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Main Page*/
+.site-sections{
+  background-color: #0e2028;
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  height: 10em;
+  margin: .3em;
+}
+
+#welcome-section{
+  height: 40em;
+  position: relative;
+}
+
+@media screen and (max-width: 730px) {
+  #welcome-section{
+    height: 30em;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  #welcome-section{
+    height: 20em;
+  }
+}
+
+.site-heading{
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-size: 5em;
+  color: rgba(255, 255, 255, .55);
+  text-align: center;
+}
+
+/*Car store(Bilar i lager)*/
+#cars-in-store{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: wrap;
+  background-color: #0e2028;
+  margin: .3rem;
+  padding: 2rem;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.car-item{
+  margin: 2em;
+  width: 340px;
+  height: 380px;
+  background-color: rgba(64, 74, 83, .5);
+  flex-shrink: 0;
+  text-align: center;
+  border-radius: 4em;
+}
+
+.brandName{
+  font-size: x-large;
+}
+
+.priceTag{
+  font-size: xx-large;
+}
+
+/*Contact*/
+#contact{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: auto;
+  height: 20em;
+}
+
+#contact-form{
+  display: flex;
+  grid-template-columns: 46px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+input[type="text"], input[type="email"], #messageForm{
+  width: 50%;
+  height: 2em;
+  resize: vertical;
+  overflow: auto;
+  border-radius: 1em;
+}
+
+#messageForm{
+  height: 5em;
+}
+
+@media screen and (max-width: 400px) {
+  input[type="text"], input[type="email"], #messageForm{
+    width: 15em;
+  }
+}
+
+#submitButton{
+  width: 25%;
+  height: 4em;
+  margin-top: 1em;
+  background-color: #0e2028;
+  border: 2px solid #abb1b3;
+  border-radius: 4em;
+  color: #fff;
+}
+
+.section-headings{
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  margin: 0;
+}
+
+.input-group{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.input-field{
+  width: 40%;
+}
+
+/*Footer*/
+footer{
+  width: 100%;
+  background-color: #0e2028;
+  color: #fff;
+  text-align: center;
+}
